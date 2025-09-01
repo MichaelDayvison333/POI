@@ -39,6 +39,26 @@ A Django web application for managing Points of Interest with data import capabi
    python manage.py createsuperuser
    ```
 
+## Running with Docker (Optional)
+
+If you prefer to run the project using Docker:
+
+### 1. Build the image
+
+   ```bash
+   docker compose build 
+   docker compose up
+   ```
+
+### 2. Run management commands
+   You can run Django commands like this:
+   
+   ```bash
+      docker compose exec web python manage.py migrate
+      docker compose exec web python manage.py createsuperuser
+      docker compose exec web python manage.py import_poi sample_data/poi_data.csv
+   ```
+
 ## Usage
 
 ### Starting the Development Server
